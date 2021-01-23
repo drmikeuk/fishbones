@@ -1,0 +1,13 @@
+﻿row,field,label,link
+1,CommonName,Common Name,/CommonName/
+2,Element,Element,/Element/
+3,View,View,
+4,LatinName,Latin Name,
+5,Family,Family,/Family/
+6,Behaviour,Behaviour,
+7,Habitat,Habitat,
+8,GeographicalRange,Geographical Range,/GeographicalRange/
+9,HeadorBody,Head or Body,
+10,BoneLocation,Bone Location,
+11,Side,Side,
+12,LendingInstitution,Lending Institution,

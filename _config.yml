@@ -1,0 +1,23 @@
+# Site settings
+title: "Fishbones"
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+port: 			  4116
+
+# Build settings
+#markdown: kramdown
+exclude: ["README.md"]
+include: [".nojekyll"]
+
+# Extra plugin to create page per item from data sources eg CSV
+# https://github.com/avillafiorita/jekyll-datapage_gen
+
+plugins:
+  - jekyll-datapage-generator
+
+page_gen:
+  - data: 'fishbones'
+    template: 'item'
+    dir: 'bones'
+    name_expr: 'record["Title"].delete(" ")'
+    title: 'Title'
