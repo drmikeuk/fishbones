@@ -21,3 +21,27 @@ page_gen:
     dir: 'bones'
     name_expr: 'record["Title"].delete(" ")'
     title: 'Title'
+
+  - data: 'fishbones'
+    template: 'element'
+    dir: 'Element'
+    name_expr: 'record["Element"].delete(" ")'
+    title: 'Element'
+
+  - data: 'fishbones'
+    template: 'commonName'
+    dir: 'CommonName'
+    name_expr: 'record["CommonName"].delete(" ")'
+    title: 'CommonName'
+
+  - data: 'fishbones'
+    template: 'family'
+    dir: 'Family'
+    name_expr: 'record["Family"].delete(" ")'
+    title: 'Family'
+
+  - data: 'fishbones'
+    template: 'geographicalRange'
+    dir: 'GeographicalRange'
+    name_expr: 'record["GeographicalRange"].delete(" ")'
+    title: 'GeographicalRange'

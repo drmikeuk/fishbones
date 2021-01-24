@@ -1,0 +1,14 @@
+<div class="col-lg-3 col-md-6 col-sm-12 pb-4" >
+  <div class="card" >
+    <img src="{{ bone.Filename | prepend: "/thumbs/"}}" class="card-img-top" alt="photo of {{ bone.Title }}">
+    <div class="card-body">
+      <p class="card-cat">{{ bone.CommonName }}</p>
+      <h5 class="card-title">{{ bone.Element }}</h5>
+      <p class="card-text">{{ bone.View }}</p>
+    </div>
+    <div class="card-footer">
+      {% assign link = bone.Title | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/bones/"| append: ".html" %}
+      <a href="{{ link }}" class="btn btn-primary">Details <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
