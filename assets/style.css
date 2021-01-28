@@ -1,12 +1,53 @@
 /* my styles */
-.header {background: #eee; border-bottom: 5px solid #ddd;}
-.footer {background: #efefef; padding: 3em 0 2em;   margin-top: 2em}
+body          {background: #333333; color: #fcfcfc}
+.footer       {background: #efefef; color: black; padding: 3em 0 2em;   margin-top: 2em}
 
-.banner           {height: 500px; background-size: cover; margin-bottom: 50px; padding-top: 2rem}
-.banner h1        {background: rgba(255,255,255, 0.6); padding: 0.5rem 1rem; display: inline-block;}
+h1              {margin-top: 2rem; margin-bottom: 1rem;}
+h2              {margin-top: 2.5rem; margin-bottom: 1rem;}
 
-.card             {border-radius: 0}
+/*  nav  */
+.bg-dark              {background-color: #080305 !important;}
+.navbar               {padding: 0.1rem 0}
+.navbar-toggler-icon  {width: 1em; height: 1em}
+.navbar-toggler       {margin: 0.2rem; padding: .25rem .5rem}
+.navbar-dark .navbar-brand {color: rgba(255,255,255,0.85)}
+.nav-item             {margin-left: 10px}
+#home .navbar-brand   {display: none}
+
+
+/*  home  */
+.home           {height: 400px; background-size: contain; background: url(/assets/home.jpg) no-repeat top center; margin-bottom: 2rem; padding-top: 1rem}
+.home h1        {font-size: 2.5rem; color: white; margin-top: 0}
+.home p         {width: 40%; background: rgba(255,255,255, 0.7); padding: 0.5rem 1rem; font-size: 1.2rem; font-style: italic;}
+
+.tile             {background-size: cover; height: 14rem; font-size: 1.4rem; position: relative; }
+.tiles .pb-4      {padding-bottom: 30px!important;}
+.tile p           {position:absolute; bottom: 6px; left: 6px; margin-bottom: 0; padding: 0 0.5rem; }
+.tile i           {padding-left: 0.2em}
+/* OPTION A - white on black -> blue */
+.tiles a          {color: white; }
+.tiles a:hover    {color: blue; }
+.tile p           {background: rgba(0,0,0, 0.5)}
+
+
+
+/*  indexes  */
+.card             {border-color: black; border-radius: 0; color: black; background-color: #FEFCFC}
 .card-img-top     {height: 10rem; width:auto; object-fit: cover; border-top-left-radius: 0; border-top-right-radius: 0}
+.card p           {margin-bottom: 0}
+.card i           {color: blue; padding-left: 10px; position: absolute; bottom: 12px; right: 12px}
+
+
+
+/*  items  */
+.itemimage        {text-align: center; padding-bottom: 2rem}
+.item a           {color: white; text-decoration: underline;}
+dt                {font-weight: 400;}
+dd                {font-weight: 600;}
+
+
+
+
 
 .tableauto        {width: auto}
 .highlight        {background-color: #f8f8f8;}

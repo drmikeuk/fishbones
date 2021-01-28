@@ -1,11 +1,11 @@
-<div class="col-lg-3 col-md-6 col-sm-12 pb-4" >
-  <div class="card" >
-    {% assign thumb = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/elementThumbs/"| append: ".jpg" %}
-    <img src="{{ thumb }}" class="card-img-top" alt="photo of {{ category }}">
-    <div class="card-body">
-      <h5 class="card-title">{{Element | capitalize }}</h5>
-      {% assign link = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/Element/"| append: ".html" %}
-      <a href="{{ link }}" class="btn btn-primary">View <i class="fas fa-chevron-right"></i></a>
-    </div>
+<div class="col-lg-3 col-md-6 col-sm-12 pb-4">
+  {% assign thumb = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/elementThumbs/"| append: ".jpg" %}
+  {% assign link = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/Element/"| append: ".html" %}
+  <div class="tile">
+    <a href="{{ link }}">
+      <div class="tile" style="background-image: url({{thumb}})">
+        <p>{{ Element | capitalize }} <i class="fas fa-chevron-circle-right"></i></p>
+      </div>
+    </a>
   </div>
 </div>

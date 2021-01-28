@@ -5,10 +5,7 @@ nav: "yes"
 sortTitle: "m"
 ---
 
-<div class="container" style="padding-top: 2rem">
-
-
-<div class="container" style="padding-top: 2rem">
+<div class="container">
 	<h1>All bones</h1>
 	<div class="row">
 

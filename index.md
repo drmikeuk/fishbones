@@ -1,13 +1,26 @@
 ---
-layout: default
+layout: home
 title: "Home"
 nav: "yes"
 sortTitle: "a"
 ---
 
-<div class="container" style="padding-top: 2rem">
-	<h1>Elements</h1>
-	<div class="row">
+<!-- HEADER -->
+<div class="home">
+	<div class="container">
+		<div class="title">
+			<h1>{{ site.title }}</h1>
+		</div>
+	</div>
+</div>
+
+<!-- TILES -->
+<div class="container">
+
+	<p>{{ site.blurb }}</p>
+
+	<h2>Browse by element</h2>
+	<div class="row tiles">
 	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
 	{% assign Elements = site.data.fishbones | map: "Element"| uniq | sort  %}
 	{% for Element in Elements %}
@@ -20,7 +33,7 @@ sortTitle: "a"
 
 
 <div class="container" style="padding-top: 2rem">
-	<h1>Elements</h1>
+	<h3>Elements</h3>
 	<ul>
 	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
 	{% assign cats = site.data.fishbones | map: "Element"| uniq | sort  %}
@@ -34,7 +47,7 @@ sortTitle: "a"
 
 
 <div class="container" style="padding-top: 2rem">
-	<h1>Common names</h1>
+	<h3>Common names</h3>
 	<ul>
 	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
 	{% assign cats = site.data.fishbones | map: "CommonName"| uniq | sort  %}
@@ -47,7 +60,7 @@ sortTitle: "a"
 </div>
 
 <div class="container" style="padding-top: 2rem">
-	<h1>Families</h1>
+	<h3>Families</h3>
 	<ul>
 	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
 	{% assign cats = site.data.fishbones | map: "Family"| uniq | sort  %}
@@ -60,7 +73,7 @@ sortTitle: "a"
 </div>
 
 <div class="container" style="padding-top: 2rem">
-	<h1>Geographical Ranges</h1>
+	<h3>Geographical Ranges</h3>
 	<ul>
 	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
 	{% assign cats = site.data.fishbones | map: "GeographicalRange"| uniq | sort  %}

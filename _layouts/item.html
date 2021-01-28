@@ -2,14 +2,22 @@
 layout: default
 ---
 
-<!-- HEADER -->
+<div class="container">
+	<h1>{{ page.Title }}</h1>
+
+	<div class="itemimage">
+		<img src="/images/{{page.Filename}}" />
+	</div>
+</div>
+
+<!-- HEADER
 <div class="banner" style='background: url(/images/{{page.Filename}}) no-repeat center center;'>
 	<div class="container">
 		<div class="title">
 			<h1>{{ page.Title }}</h1>
 		</div>
 	</div>
-</div>
+</div>-->
 
 
 <!-- CONTENT -->
@@ -17,7 +25,7 @@ layout: default
 	<div class="row">
 		<div class="col-lg-8 col-md-9">
 
-			<dl class="row">
+			<dl class="row item">
 				{% for data in site.data.metadata %}
 					{% if page[data.field] %} {% comment %} ie we have data to dispaly {% endcomment %}
 						<dt class="col-sm-3">{{ data.label }}</dt>
