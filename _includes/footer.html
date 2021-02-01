@@ -1,17 +1,31 @@
 <!-- FOOTER -->
 <div class="footer">
   <div class="container">
+    <div class="row">
+      <h4>{{ site.title }}</h4>
+      <p>{{ site.blurb }}</p>
+    </div>
 
-    <h4>{{ site.title }}</h4>
-    <p>{{ site.blurb }}</p>
+    <div class="row">
+      <div class="col-md-4">
+        <ul>
+          {% comment %} Only include pages with `nav: yes` in the front-matter; sort on sortTitle{% endcomment %}
+          {% assign pages = (site.pages | where: "nav","yes" | sort: "sortTitle" ) %}
+          {% for page in pages %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
 
-    <p>copyright privacy and cookies</p>
-    <p>main links to browse + about the project?</p>
+      <div class="col-md-8">
+        <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-    <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p>
+        <p>cookies ...</p>
 
-    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-    
+        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
+
+      </div>
+    </div>
   </div>
 </div>
 

@@ -1,8 +1,8 @@
 ---
 layout: home
-title: "Home"
+title: "Elements"
 nav: "yes"
-sortTitle: "a"
+sortTitle: "bb"
 ---
 
 <!-- HEADER -->
@@ -27,60 +27,13 @@ sortTitle: "a"
 		{% include tile.html %}
 	{% endfor %}
 	</div>
-</div>
 
 
+	<h2>Videos</h2>
+
+	<p>Workshops were held at the Universities of Bradford, Cambridge, Bournemouth and York, and were led by world-leading experts in fish analysis: Andrew Jones, James Barrett, Alison Locker, Shelia Hamilton-Dyer and Rebecca Nicholson. To capture and distil the expertise available at these events, all of the workshops were filmed and the resulting footage was cut together to produce a series of training e-lectures.</p>
+
+	<a href="/videos.html" class="btn btn-primary">View videos <i class="fas fa-chevron-circle-right"></i></a>
 
 
-<div class="container" style="padding-top: 2rem">
-	<h3>Elements</h3>
-	<ul>
-	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
-	{% assign cats = site.data.fishbones | map: "Element"| uniq | sort  %}
-	{% for cat in cats %}
-		<!-- remove spaces + top & tail => /category/<thiscat>.html -->
-		{% assign link = cat | remove: " " | prepend: "/Element/" | append: ".html" %}
-		<li><a href="{{link}}">{{cat | capitalize }}</a></li>
-	{% endfor %}
-	</ul>
-</div>
-
-
-<div class="container" style="padding-top: 2rem">
-	<h3>Common names</h3>
-	<ul>
-	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
-	{% assign cats = site.data.fishbones | map: "CommonName"| uniq | sort  %}
-	{% for cat in cats %}
-		<!-- remove spaces + top & tail => /category/<thiscat>.html -->
-		{% assign link = cat | remove: " " | prepend: "/CommonName/" | append: ".html" %}
-		<li><a href="{{link}}">{{cat | capitalize }}</a></li>
-	{% endfor %}
-	</ul>
-</div>
-
-<div class="container" style="padding-top: 2rem">
-	<h3>Families</h3>
-	<ul>
-	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
-	{% assign cats = site.data.fishbones | map: "Family"| uniq | sort  %}
-	{% for cat in cats %}
-		<!-- remove spaces + top & tail => /category/<thiscat>.html -->
-		{% assign link = cat | remove: " " | prepend: "/Family/" | append: ".html" %}
-		<li><a href="{{link}}">{{cat | capitalize }}</a></li>
-	{% endfor %}
-	</ul>
-</div>
-
-<div class="container" style="padding-top: 2rem">
-	<h3>Geographical Ranges</h3>
-	<ul>
-	<!-- 'map' so only category property + 'uniq' to remove duplicates => simple list of cats -->
-	{% assign cats = site.data.fishbones | map: "GeographicalRange"| uniq | sort  %}
-	{% for cat in cats %}
-		<!-- remove spaces + top & tail => /category/<thiscat>.html -->
-		{% assign link = cat | remove: " " | prepend: "/GeographicalRange/" | append: ".html" %}
-		<li><a href="{{link}}">{{cat | capitalize }}</a></li>
-	{% endfor %}
-	</ul>
 </div>
