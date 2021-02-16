@@ -1,5 +1,6 @@
 ---
 layout: default
+filter: "yes"
 ---
 
 <!-- HEADER
@@ -19,13 +20,35 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 <!-- CONTENT -->
 <div class="container" style="padding-top: 2rem">
 
-	<h1>Element: {{ page.Element }}</h1>
+	<div class="row title">
+		<div class="col">
+			<p>Element:</p>
+			<h2>{{ page.Element }}</h2>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12">
+		<form class="form-inline">
+			 <input class="form-control" id="filterFish" type="text" placeholder="Filter...">
+		</form>
+		</div>
+	</div>
 
-	<div class="row">
 
-		{% assign bones = site.data.fishbones | where: "Element",page.Element %}
+	<div class="row tiles">
+
+		{% assign bones = site.data.fishbones | where: "Element",page.Element | sort: "CommonName" %}
 		{% for bone in bones %}
-			{% include card-element.html %}
+		{% assign link = bone.Title | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/bones/"| append: ".html" %}
+		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
+		    <div class="card flex-fill" >
+		    <img src="{{ bone.Filename | prepend: "/thumbs/"}}" class="card-img-top" alt="photo of {{ bone.Title }}">
+		    <div class="card-body">
+		      <p class="card-cat">{{ bone.Element }}</p>
+		      <h5 class="card-title">{{ bone.CommonName }}</h5>
+		      <p class="card-text">{{ bone.View }}</p>
+		      <a href="{{ link }}" class="stretched-link"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
+		    </div>
+		  </div>
+		</div>
 		{% endfor %}
 
 	</div>

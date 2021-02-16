@@ -9,10 +9,8 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          {% comment %} Only include pages with `nav: yes` in the front-matter; sort on sortTitle{% endcomment %}
-          {% assign pages = (site.pages | where: "nav","yes" | sort: "sortTitle" ) %}
-          {% for page in pages %}
-          <li class="nav-item"><a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% for item in site.data.nav %}
+          <li class="nav-item"><a class="nav-link" href="{{ item.link | prepend: site.baseurl }}">{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </div>

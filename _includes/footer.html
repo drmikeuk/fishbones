@@ -9,10 +9,8 @@
     <div class="row">
       <div class="col-md-4">
         <ul>
-          {% comment %} Only include pages with `nav: yes` in the front-matter; sort on sortTitle{% endcomment %}
-          {% assign pages = (site.pages | where: "nav","yes" | sort: "sortTitle" ) %}
-          {% for page in pages %}
-          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% for item in site.data.nav %}
+          <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </div>

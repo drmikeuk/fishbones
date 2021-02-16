@@ -20,7 +20,16 @@ sortTitle: "g"
 
 	<div class="row tiles">
 	{% for video in site.data.videos %}
-		{% include videotile.html %}
+	<div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+	  {% assign thumb = video.Filename | prepend: "/videoimages/" %}
+	  <div class="tile">
+	    <a href="{{ video.link }}">
+	      <div class="tile" style="background-image: url({{thumb}})">
+	        <p>{{ video.Title }} <i class="fas fa-chevron-circle-right"></i></p>
+	      </div>
+	    </a>
+	  </div>
+	</div>
 	{% endfor %}
 	</div>
 

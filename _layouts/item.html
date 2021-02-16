@@ -31,7 +31,7 @@ layout: default
 						<dt class="col-sm-3">{{ data.label }}</dt>
 						{% if data.link %}
 							{% assign link = page[data.field] | remove: " " | remove: "(" | remove: ")" | prepend: data.link | append: ".html" %}
-							<dd class="col-sm-7"><a href="{{link}}">{{ page[data.field] }}</a></dd>
+							<dd class="col-sm-7"><a href="{{link}}">{{ page[data.field] }} <i class="fas fa-chevron-circle-right"></i></a></dd>
 						{% else %}
 						 <dd class="col-sm-7">{{ page[data.field] }} </dd>
 						{% endif %}
