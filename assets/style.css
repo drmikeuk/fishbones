@@ -1,13 +1,7 @@
 /* my styles */
-body          {background: #2a2a2a; color: #fcfcfc}
-.footer       {background: #2a2a2a; color: #A6ACAF; padding: 3em 0 2em;   margin-top: 2em}
-.footer a     {color: #A6ACAF;}
-.main         {background: #333333; padding-bottom: 4em}
+body            {background: #2a2a2a; color: #fcfcfc}
 
-h1              {padding-top: 2rem; margin-bottom: 1rem;}
-h2              {margin-bottom: 1rem;}
-
-/*  nav  */
+/*  nav: darkest */
 .bg-dark              {background-color: #080305 !important;}
 .navbar               {padding: 0.1rem 0}
 .navbar-toggler-icon  {width: 1em; height: 1em}
@@ -15,6 +9,24 @@ h2              {margin-bottom: 1rem;}
 .navbar-dark .navbar-brand {color: rgba(255,255,255,0.85)}
 .nav-item             {margin-left: 10px}
 #home .navbar-brand   {display: none}
+.navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,.8);}
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover { color: #4fc3f7;}
+
+/* main: dark */
+.main           {background: #333333; padding-bottom: 4em}
+
+/*  footer: darkest */
+.footer         {background: #2a2a2a; color: #A6ACAF; padding: 3em 0 2em;   margin-top: 2em}
+.footer a       {color: #A6ACAF;}
+.footer a:hover {color: #4fc3f7; /* primary blue */ }
+
+
+h1              {padding-top: 2rem; margin-bottom: 1rem;}
+h2              {margin-bottom: 1rem;}
+
+a               {color: #fcfcfc; }
+a:hover         {color: #4fc3f7; text-decoration: none}
 
 
 /*  home  */
@@ -22,7 +34,11 @@ h2              {margin-bottom: 1rem;}
 .home h1        {font-size: 2.5rem; color: white; margin-top: 0}
 .home p         {width: 40%; background: rgba(255,255,255, 0.7); padding: 0.5rem 1rem; font-size: 1.2rem; font-style: italic;}
 .strap          {margin-top: -1rem; margin-bottom: 2rem}
-.btn-primary    {}
+.btn-primary    {color: #2a2a2a; border-color: #1cb2f5; background: #4fc3f7; /* primary blue */}
+.btn-primary:hover,
+.btn-primary:active {color: #2a2a2a; border-color: #81d4fa; background: #b3e5fc}
+
+
 
 
 .tile             {margin: 3px; background-size: cover; height: 14rem; font-size: 1.2rem; position: relative; }
@@ -31,9 +47,6 @@ h2              {margin-bottom: 1rem;}
 .tile p           {position:absolute; bottom: 4px; left: 4px; margin-bottom: 0; padding: 4px 0.5rem 4px; line-height: normal;}
 #home .tile p     {bottom: 0; left: 0; }
 .tile i           {padding-left: 0.2em}
-/* OPTION A - white on black -> blue */
-.tiles a          {color: white; }
-.tiles a:hover    {color: blue; }
 .tile p           {background: rgba(0,0,0, 0.5)}
 
 
@@ -41,19 +54,19 @@ h2              {margin-bottom: 1rem;}
 /*  indexes  */
 .title p          {margin-bottom: 0; }
 .title .form-inline {margin: 10px; }
-.title .form-inline .form-control   {width:100%}
+.title .form-inline .form-control   {width:100%; background: #858585; background: #ebebeb}
+.form-control:focus { color: #495057; background-color: #adadad;  border-color: #858585;  box-shadow: none}
 
-.card             {margin: 5px; border-color: black; border-radius: 0; color: black; background-color: #FEFCFC}
+.card             {margin: 5px; border-color: #333333; border-radius: 0; background-color: #5c5c5c}
 .card-img-top     {height: 10rem; width:auto; object-fit: cover; border-top-left-radius: 0; border-top-right-radius: 0}
 .card p           {margin-bottom: 0}
-.card i           {color: blue; padding-left: 10px; position: absolute; bottom: 12px; right: 12px}
-.card-cat         {font-size: 80%; color: #566573}
+.card i           {/*color: #4fc3f7*/ padding-left: 10px; position: absolute; bottom: 12px; right: 12px}
+.card-cat         {font-size: 80%; color: #d6d6d6}
 
 
 
 /*  items  */
 .itemimage        {text-align: center; padding-bottom: 2rem}
-.item a           {color: white; }
 dt                {font-weight: 400;}
 dd                {font-weight: 600;}
 .item i           {padding-left: 0.2em}
