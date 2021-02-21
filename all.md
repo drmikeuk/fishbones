@@ -28,7 +28,7 @@ filter: "yes"
 {% assign link = bone.Title | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/bones/"| append: ".html" %}
 <div class="col-lg-3 col-md-6 col-sm-12 pb-4" >
     <div class="card flex-fill" >
-    <img src="{{ bone.Filename | prepend: "/thumbs/"}}" class="card-img-top" alt="photo of {{ bone.Title }}">
+    <img data-src="{{ bone.Filename | prepend: "/thumbs/"}}" class="card-img-top" alt="photo of {{ bone.Title }}">
     <div class="card-body">
       <p class="card-cat">{{ bone.Family }}</p>
       <h5 class="card-title">{{ bone.CommonName }}</h5>
