@@ -90,7 +90,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/e5d1c05537d8a45b055cdc67575435c6.jpg" class="card-img-top" alt="photo of Arctic Char quadrate lateral view">
+		    <img data-src="/thumbs/e5d1c05537d8a45b055cdc67575435c6.jpg" class="card-img-top" alt="photo of Arctic Char quadrate lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Quadrate</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -103,7 +103,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/0dcae75de86d49dfbf67be583360f129.jpg" class="card-img-top" alt="photo of Arctic Char quadrate medial view">
+		    <img data-src="/thumbs/0dcae75de86d49dfbf67be583360f129.jpg" class="card-img-top" alt="photo of Arctic Char quadrate medial view">
 		    <div class="card-body">
 		      <p class="card-cat">Quadrate</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -116,7 +116,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/3fd088b2664dfbf50a2405997a88b407.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  quadrate lateral view">
+		    <img data-src="/thumbs/3fd088b2664dfbf50a2405997a88b407.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  quadrate lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Quadrate</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -129,7 +129,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/bb10d09b6ffe8c2d1b4c7c49afafdd7f.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  quadrate medial view">
+		    <img data-src="/thumbs/bb10d09b6ffe8c2d1b4c7c49afafdd7f.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  quadrate medial view">
 		    <div class="card-body">
 		      <p class="card-cat">Quadrate</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -178,23 +178,24 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
       <div class="col-md-8">
         <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-        <p>cookies ...</p>
-
-        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
-
       </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/vendor/jquery-3.3.1.slim.min.js "></script>
-<script src="/vendor/popper.min.js "></script>
-<script src="/vendor/bootstrap-4.3.1.min.js "></script>
+<script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+<script src="/vendor/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.3.1.min.js"></script>
+
+<script src="/vendor/jquery.lazy.min.js"></script>
 
 
 <script>
 $(document).ready(function(){
+  // lazy load images
+  $('.card-img-top').Lazy();
+
   // run filter from filter box
   $("#filterFish").on("keyup", function() {
     var value = $(this).val().toLowerCase();

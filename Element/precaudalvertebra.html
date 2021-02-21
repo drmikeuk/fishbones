@@ -90,7 +90,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/7b60d3535133e8b14a5272e3af31ea54.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra lateral view">
+		    <img data-src="/thumbs/7b60d3535133e8b14a5272e3af31ea54.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -103,7 +103,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/b427eed0a6541b2cbc2c3d6e6dfc69a0.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra lateral view">
+		    <img data-src="/thumbs/b427eed0a6541b2cbc2c3d6e6dfc69a0.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -116,7 +116,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/9347430f5a6af0f586a1836312129e4b.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra anterior view">
+		    <img data-src="/thumbs/9347430f5a6af0f586a1836312129e4b.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra anterior view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -129,7 +129,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/088cf3d31d4a1f8d8ebe2f3c88036886.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra anterior view">
+		    <img data-src="/thumbs/088cf3d31d4a1f8d8ebe2f3c88036886.jpg" class="card-img-top" alt="photo of Arctic Char precaudal vertebra anterior view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -142,7 +142,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/5d85d758a4c7ac07c05b3623e725a7e1.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  precaudal vertebra anterior view">
+		    <img data-src="/thumbs/5d85d758a4c7ac07c05b3623e725a7e1.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  precaudal vertebra anterior view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -155,7 +155,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/05b8a053286a630d4ac917f99c1d374f.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  precaudal vertebra lateral view">
+		    <img data-src="/thumbs/05b8a053286a630d4ac917f99c1d374f.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  precaudal vertebra lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Precaudal Vertebra</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -204,23 +204,24 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
       <div class="col-md-8">
         <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-        <p>cookies ...</p>
-
-        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
-
       </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/vendor/jquery-3.3.1.slim.min.js "></script>
-<script src="/vendor/popper.min.js "></script>
-<script src="/vendor/bootstrap-4.3.1.min.js "></script>
+<script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+<script src="/vendor/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.3.1.min.js"></script>
+
+<script src="/vendor/jquery.lazy.min.js"></script>
 
 
 <script>
 $(document).ready(function(){
+  // lazy load images
+  $('.card-img-top').Lazy();
+
   // run filter from filter box
   $("#filterFish").on("keyup", function() {
     var value = $(this).val().toLowerCase();

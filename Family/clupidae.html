@@ -90,13 +90,13 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/0bb9bcc74c8976aa33736e285ba1f15d.jpg" class="card-img-top" alt="photo of Atlantic herring otolith(s) detail view">
+		    <img data-src="/thumbs/0bb9bcc74c8976aa33736e285ba1f15d.jpg" class="card-img-top" alt="photo of Atlantic herring otolith(s) detail view">
 		    <div class="card-body">
 		      <p class="card-cat">Clupidae</p>
 		      <h5 class="card-title">Atlantic herring</h5>
 		      <p class="card-text">Otolith(s)</p>
 		      <p class="card-text">Detail view</p>
-		      <a href="/bones/atlanticherringotolithsdetailview.html" class="stretched-link"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
+		      <a href="/bones/atlanticherringotolithsdetailview.html" class="stretched-link" aria-label="Atlantic herring otolith(s) detail view"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
 		    </div>
 		  </div>
 		</div>
@@ -104,13 +104,13 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/a0f7595c15cc786a98f3949b86b48728.jpg" class="card-img-top" alt="photo of Atlantic herring otolith(s) detail view">
+		    <img data-src="/thumbs/a0f7595c15cc786a98f3949b86b48728.jpg" class="card-img-top" alt="photo of Atlantic herring otolith(s) detail view">
 		    <div class="card-body">
 		      <p class="card-cat">Clupidae</p>
 		      <h5 class="card-title">Atlantic herring</h5>
 		      <p class="card-text">Otolith(s)</p>
 		      <p class="card-text">Detail view</p>
-		      <a href="/bones/atlanticherringotolithsdetailview.html" class="stretched-link"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
+		      <a href="/bones/atlanticherringotolithsdetailview.html" class="stretched-link" aria-label="Atlantic herring otolith(s) detail view"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
 		    </div>
 		  </div>
 		</div>
@@ -154,23 +154,24 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
       <div class="col-md-8">
         <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-        <p>cookies ...</p>
-
-        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
-
       </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/vendor/jquery-3.3.1.slim.min.js "></script>
-<script src="/vendor/popper.min.js "></script>
-<script src="/vendor/bootstrap-4.3.1.min.js "></script>
+<script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+<script src="/vendor/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.3.1.min.js"></script>
+
+<script src="/vendor/jquery.lazy.min.js"></script>
 
 
 <script>
 $(document).ready(function(){
+  // lazy load images
+  $('.card-img-top').Lazy();
+
   // run filter from filter box
   $("#filterFish").on("keyup", function() {
     var value = $(this).val().toLowerCase();

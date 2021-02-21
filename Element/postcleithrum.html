@@ -90,7 +90,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/6baf6b32cb448fb73182423f4cdcdbd2.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  postcleithrum left">
+		    <img data-src="/thumbs/6baf6b32cb448fb73182423f4cdcdbd2.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  postcleithrum left">
 		    <div class="card-body">
 		      <p class="card-cat">Postcleithrum</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -103,7 +103,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/bfc99a5f69d37d2b2eed8ee402d75e29.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  postcleithrum left">
+		    <img data-src="/thumbs/bfc99a5f69d37d2b2eed8ee402d75e29.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  postcleithrum left">
 		    <div class="card-body">
 		      <p class="card-cat">Postcleithrum</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -152,23 +152,24 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
       <div class="col-md-8">
         <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-        <p>cookies ...</p>
-
-        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
-
       </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/vendor/jquery-3.3.1.slim.min.js "></script>
-<script src="/vendor/popper.min.js "></script>
-<script src="/vendor/bootstrap-4.3.1.min.js "></script>
+<script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+<script src="/vendor/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.3.1.min.js"></script>
+
+<script src="/vendor/jquery.lazy.min.js"></script>
 
 
 <script>
 $(document).ready(function(){
+  // lazy load images
+  $('.card-img-top').Lazy();
+
   // run filter from filter box
   $("#filterFish").on("keyup", function() {
     var value = $(this).val().toLowerCase();

@@ -90,7 +90,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/2e24640413b323c829665eb7fcc597c4.jpg" class="card-img-top" alt="photo of Angler fish dentary medial view">
+		    <img data-src="/thumbs/2e24640413b323c829665eb7fcc597c4.jpg" class="card-img-top" alt="photo of Angler fish dentary medial view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Angler fish</h5>
@@ -103,7 +103,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/41b0bcc3aad612e9525673dbe2e9c986.jpg" class="card-img-top" alt="photo of Angler fish dentary lateral view">
+		    <img data-src="/thumbs/41b0bcc3aad612e9525673dbe2e9c986.jpg" class="card-img-top" alt="photo of Angler fish dentary lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Angler fish</h5>
@@ -116,7 +116,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/af8793bcae95f0ff50b607a6572c035d.jpg" class="card-img-top" alt="photo of Arctic Char dentary medial view">
+		    <img data-src="/thumbs/af8793bcae95f0ff50b607a6572c035d.jpg" class="card-img-top" alt="photo of Arctic Char dentary medial view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -129,7 +129,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/336d78852ca2acb886f0be2806a87a50.jpg" class="card-img-top" alt="photo of Arctic Char dentary lateral view">
+		    <img data-src="/thumbs/336d78852ca2acb886f0be2806a87a50.jpg" class="card-img-top" alt="photo of Arctic Char dentary lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Arctic Char</h5>
@@ -142,7 +142,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/1fbea04364ee0ff23c26bdc0c42f1f69.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  dentary lateral view">
+		    <img data-src="/thumbs/1fbea04364ee0ff23c26bdc0c42f1f69.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  dentary lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -155,7 +155,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4 " >
 		    <div class="card flex-fill" >
-		    <img src="/thumbs/135a59b3be7c0081225e2570fd3ef325.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  dentary medial view">
+		    <img data-src="/thumbs/135a59b3be7c0081225e2570fd3ef325.jpg" class="card-img-top" alt="photo of Atlantic bluefin tuna  dentary medial view">
 		    <div class="card-body">
 		      <p class="card-cat">Dentary</p>
 		      <h5 class="card-title">Atlantic bluefin tuna</h5>
@@ -204,23 +204,24 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
       <div class="col-md-8">
         <p><i>Except for third party materials (materials owned by someone other than The University of Nottingham) and where otherwise indicated, the copyright in the content provided on this site is owned by The University of Nottingham and licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-NonCommercial-ShareAlike UK 2.0 Licence (BY-NC-SA)</a>.</i></p>
 
-        <p>cookies ...</p>
-
-        <!-- <p><a href="/about/"><i class="fas fa-info-circle" aria-hidden="true"></i> About the project</a></p> -->
-
       </div>
     </div>
   </div>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/vendor/jquery-3.3.1.slim.min.js "></script>
-<script src="/vendor/popper.min.js "></script>
-<script src="/vendor/bootstrap-4.3.1.min.js "></script>
+<script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+<script src="/vendor/popper.min.js"></script>
+<script src="/vendor/bootstrap-4.3.1.min.js"></script>
+
+<script src="/vendor/jquery.lazy.min.js"></script>
 
 
 <script>
 $(document).ready(function(){
+  // lazy load images
+  $('.card-img-top').Lazy();
+
   // run filter from filter box
   $("#filterFish").on("keyup", function() {
     var value = $(this).val().toLowerCase();
