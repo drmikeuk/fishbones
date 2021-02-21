@@ -41,8 +41,6 @@
             
             <li class="nav-item"><a class="nav-link" href="/videos.html">Videos</a></li>
             
-            <li class="nav-item"><a class="nav-link" href="/all.html">All bones</a></li>
-            
             <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
             
           </ul>
@@ -93,7 +91,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		    <img data-src="/thumbs/de10865aa5459179ca4f8514200030d0.jpg" class="card-img-top" alt="photo of Angler fish caudal vertebra posterior view">
 		    <div class="card-body">
 		      <p class="card-cat">Angler fish</p>
-		      <h5 class="card-title">Caudal Vertebra</h5>
+		      <h5 class="card-title">Caudal vertebra</h5>
 		      <p class="card-text">Posterior view</p>
 		      <a href="/bones/anglerfishcaudalvertebraposteriorview.html" class="stretched-link" aria-label="Angler fish caudal vertebra posterior view"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
 		    </div>
@@ -106,7 +104,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		    <img data-src="/thumbs/f9b7c52e13b65c1cb601af92c0e04bcc.jpg" class="card-img-top" alt="photo of Angler fish caudal vertebra anterior view">
 		    <div class="card-body">
 		      <p class="card-cat">Angler fish</p>
-		      <h5 class="card-title">Caudal Vertebra</h5>
+		      <h5 class="card-title">Caudal vertebra</h5>
 		      <p class="card-text">Anterior View</p>
 		      <a href="/bones/anglerfishcaudalvertebraanteriorview.html" class="stretched-link" aria-label="Angler fish caudal vertebra anterior view"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
 		    </div>
@@ -119,7 +117,7 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
 		    <img data-src="/thumbs/f8b4d400e76083648787e93e8a150c6e.jpg" class="card-img-top" alt="photo of Angler fish caudal vertebra lateral view">
 		    <div class="card-body">
 		      <p class="card-cat">Angler fish</p>
-		      <h5 class="card-title">Caudal Vertebra</h5>
+		      <h5 class="card-title">Caudal vertebra</h5>
 		      <p class="card-text">Lateral View</p>
 		      <a href="/bones/anglerfishcaudalvertebralateralview.html" class="stretched-link" aria-label="Angler fish caudal vertebra lateral view"><i class="fas fa-chevron-circle-right fa-2x"></i></a>
 		    </div>
@@ -207,8 +205,6 @@ banner image by _convention_ ie /cat-thumbs/<cat name>.jpg ??
           
           <li><a href="/videos.html">Videos</a></li>
           
-          <li><a href="/all.html">All bones</a></li>
-          
           <li><a href="/about.html">About</a></li>
           
         </ul>
@@ -242,6 +238,8 @@ $(document).ready(function(){
     $(".tiles div").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+    // done - call scoll to activate lazyload
+    $(document).scroll();
   });
 });
 </script>
