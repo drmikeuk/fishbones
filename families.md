@@ -38,8 +38,8 @@ filter: "yes"
 	{% for cat in cats %}
 		<div class="col-lg-3 col-md-6 col-sm-12 pb-4">
 		  {% comment %} LINK: remove spaces + top & tail => /category/<thiscat>.html {% endcomment %}
-		  {% assign thumb = cat | remove: " " | remove: "'" | downcase | prepend: "/familiesthumbs/"| append: ".jpg" %}
-		  {% assign link = cat | remove: " " | prepend: "/Family/" | append: ".html" %}
+		  {% assign thumb = cat | capitalize | remove: " " | remove: "'" | prepend: "/familiesthumbs/"| append: ".jpg" %}
+		  {% assign link = cat | downcase | remove: " " | prepend: "/Family/" | append: ".html" %}
 		  <div class="tile">
 		    <a href="{{ link }}">
 		      <div class="tile" style="background-image: url({{thumb}})">

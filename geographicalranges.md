@@ -23,7 +23,7 @@ sortTitle: "d"
 	{% assign cats = site.data.fishbones | map: "GeographicalRange"| uniq | sort  %}
 	{% for cat in cats %}
 		<!-- remove spaces + top & tail => /category/<thiscat>.html -->
-		{% assign link = cat | remove: " " | prepend: "/GeographicalRange/" | append: ".html" %}
+		{% assign link = cat | downcase | remove: " " | prepend: "/GeographicalRange/" | append: ".html" %}
 		<li><a href="{{link}}">{{cat | capitalize }}</a></li>
 	{% endfor %}
 	</ul>

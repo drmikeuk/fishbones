@@ -38,7 +38,7 @@ filter: "yes"
 	{% assign Elements = site.data.fishbones | map: "Element"| uniq | sort  %}
 	{% for Element in Elements %}
 	<div class="col-lg-3 col-md-6 col-sm-12 pb-4">
-	  {% assign thumb = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/elementThumbs/"| append: ".jpg" %}
+	  {% assign thumb = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/elementthumbs/"| append: ".jpg" %}
 	  {% assign link = Element | remove: " " | remove: "(" | remove: ")" | downcase | prepend: "/Element/"| append: ".html" %}
 	  <div class="tile">
 	    <a href="{{ link }}">
