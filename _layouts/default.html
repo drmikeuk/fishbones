@@ -90,6 +90,8 @@ $(document).ready(function(){
     $(".tiles div").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+    // done - call scoll to activate lazyload
+    $(document).scroll();
   });
 });
 </script>
